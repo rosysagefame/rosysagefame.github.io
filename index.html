@@ -1,0 +1,365 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Storm Client - Ghost & Blatant Cheats</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow:wght@300;400;600&family=Barlow+Condensed:wght@400;700&display=swap"
+            rel="stylesheet"
+        />
+        <link rel="stylesheet" href="main.css">
+    </head>
+    <body>
+        <div id="rain"></div>
+        <div class="grid-bg"></div>
+        <canvas id="bolt"></canvas>
+
+        <!-- NAV -->
+        <nav>
+            <a class="logo" href="#">
+                <svg viewBox="0 0 30 30" fill="none">
+                    <polygon
+                        points="17,2 7,17 14,17 13,28 23,13 16,13"
+                        fill="#7dd3fc"
+                    />
+                </svg>
+                <span class="logo-text">STORM</span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="#features">Features</a></li>
+                <li><a href="#modules">Modules</a></li>
+                <li><a href="#download">Download</a></li>
+            </ul>
+            <a href="#download" class="nav-cta">Get Client</a>
+        </nav>
+
+        <!-- HERO -->
+        <section class="hero">
+            <p class="hero-eye">Ghost & Blatant Hacked Client</p>
+            <h1 class="hero-title">STORM<span>CLIENT</span></h1>
+            <p class="hero-sub">
+                A work-in-progress for years, now complete and 100% free.
+                Donations are accepted to support development.
+            </p>
+            <div class="hero-btns">
+                <a href="#download" class="btn-p">Download v1.0.2</a>
+                <a href="#features" class="btn-s">View Features</a>
+            </div>
+        </section>
+
+        <!-- TICKER -->
+        <div class="ticker-wrap">
+            <div class="ticker-track" id="ticker"></div>
+        </div>
+
+        <!-- FEATURES -->
+        <section class="features" id="features">
+            <div class="f-head reveal">
+                <p class="label">Core Systems</p>
+                <h2 class="sec-title">Built for <em>everything</em></h2>
+            </div>
+            <div class="f-grid">
+                <div class="f-card reveal">
+                    <svg class="f-icon" viewBox="0 0 38 38" fill="none">
+                        <polygon
+                            points="19,3 7,19 14,19 13,35 31,19 24,19 25,3"
+                            fill="rgba(125,211,252,0.12)"
+                            stroke="#7dd3fc"
+                            stroke-width="1.4"
+                        />
+                    </svg>
+                    <div class="f-name">AutoCrystal</div>
+                    <p class="f-desc">
+                        Predictive end crystal placement and detonation.
+                        Multi-target tracking with configurable damage
+                        thresholds, inhibition logic, and sub-tick timing.
+                    </p>
+                    <span class="f-tag">Combat</span>
+                </div>
+
+                <div class="f-card reveal">
+                    <svg class="f-icon" viewBox="0 0 38 38" fill="none">
+                        <circle
+                            cx="19"
+                            cy="19"
+                            r="13"
+                            stroke="#7dd3fc"
+                            stroke-width="1.4"
+                            fill="rgba(125,211,252,0.07)"
+                        />
+                        <path
+                            d="M11 19h5M22 19h5M19 11v5M19 22v5"
+                            stroke="#7dd3fc"
+                            stroke-width="1.8"
+                            stroke-linecap="round"
+                        />
+                    </svg>
+                    <div class="f-name">SilentAura</div>
+                    <p class="f-desc">
+                        Combines AimAssist and AutoClicker for a KillAura-like
+                        module that looks completely legitimate.
+                    </p>
+                    <span class="f-tag">Combat</span>
+                </div>
+
+                <div class="f-card reveal">
+                    <svg class="f-icon" viewBox="0 0 38 38" fill="none">
+                        <rect
+                            x="6"
+                            y="6"
+                            width="26"
+                            height="26"
+                            rx="2"
+                            stroke="#06b6d4"
+                            stroke-width="1.4"
+                            fill="rgba(6,182,212,0.07)"
+                        />
+                        <path
+                            d="M12 19l5 5 9-10"
+                            stroke="#06b6d4"
+                            stroke-width="1.8"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                        />
+                    </svg>
+                    <div class="f-name">ESP & Tracers</div>
+                    <p class="f-desc">
+                        Player, mob, item, and chest ESP with distance fading
+                        and per-entity color coding. Tracers with opacity,
+                        width, and angle offset controls.
+                    </p>
+                    <span class="f-tag">Visual</span>
+                </div>
+
+                <div class="f-card reveal">
+                    <svg class="f-icon" viewBox="0 0 38 38" fill="none">
+                        <path
+                            d="M7 31L19 7l12 24"
+                            stroke="#7dd3fc"
+                            stroke-width="1.4"
+                            fill="none"
+                            stroke-linejoin="round"
+                        />
+                        <line
+                            x1="11"
+                            y1="23"
+                            x2="27"
+                            y2="23"
+                            stroke="#7dd3fc"
+                            stroke-width="1.4"
+                        />
+                    </svg>
+                    <div class="f-name">Speed & Flight</div>
+                    <p class="f-desc">
+                        Server-side movement with configurable sprint
+                        multipliers, step height bypass, and timer-based
+                        velocity. Built-in anti-kick with randomized ground
+                        spoof.
+                    </p>
+                    <span class="f-tag">Movement</span>
+                </div>
+
+                <div class="f-card reveal">
+                    <svg class="f-icon" viewBox="0 0 38 38" fill="none">
+                        <circle
+                            cx="19"
+                            cy="19"
+                            r="5"
+                            fill="rgba(125,211,252,0.18)"
+                            stroke="#7dd3fc"
+                            stroke-width="1.4"
+                        />
+                        <circle
+                            cx="19"
+                            cy="19"
+                            r="11"
+                            stroke="rgba(125,211,252,0.28)"
+                            stroke-width="0.9"
+                            stroke-dasharray="3 2"
+                        />
+                        <circle
+                            cx="19"
+                            cy="19"
+                            r="16"
+                            stroke="rgba(125,211,252,0.12)"
+                            stroke-width="0.7"
+                            stroke-dasharray="2 3"
+                        />
+                    </svg>
+                    <div class="f-name">Alt Manager</div>
+                    <p class="f-desc">
+                        Built-in GUI for managing alternate accounts to get
+                        around bans.
+                    </p>
+                    <span class="f-tag">Ban-Evasion</span>
+                </div>
+
+                <div class="f-card reveal">
+                    <svg class="f-icon" viewBox="0 0 38 38" fill="none">
+                        <rect
+                            x="5"
+                            y="13"
+                            width="28"
+                            height="18"
+                            rx="1.5"
+                            stroke="#06b6d4"
+                            stroke-width="1.4"
+                            fill="rgba(6,182,212,0.07)"
+                        />
+                        <path
+                            d="M13 13V9a6 6 0 0112 0v4"
+                            stroke="#06b6d4"
+                            stroke-width="1.4"
+                            stroke-linecap="round"
+                        />
+                        <circle cx="19" cy="22" r="3" fill="#06b6d4" />
+                    </svg>
+                    <div class="f-name">AC Bypass</div>
+                    <p class="f-desc">
+                        Adaptive movement profiles that mimic legitimate play
+                        patterns. Updated continuously against popular server
+                        anti-cheat implementations, such as NoCheatPlus, Vulcan,
+                        GrimAC, and even to a degree, Watchdog.
+                    </p>
+                    <span class="f-tag">Utility</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- MODULES -->
+        <section class="mods-sec" id="modules">
+            <div class="mods-inner">
+                <div class="mods-top reveal">
+                    <div>
+                        <p class="label">Module Library</p>
+                        <h2 class="sec-title">50+ <em>modules</em></h2>
+                    </div>
+                    <div class="mods-bg-num">50+</div>
+                </div>
+                <div class="mods-grid" id="mods-grid"></div>
+            </div>
+        </section>
+
+        <!-- DOWNLOAD -->
+        <section class="dl-sec" id="download">
+            <div class="dl-bg-word">STORM</div>
+            <div class="dl-inner">
+                <div class="ver-tag reveal">v1.0.2 - Stable Release</div>
+                <h2 class="dl-title reveal">DOWNLOAD<br />STORM</h2>
+                <p class="dl-sub reveal">
+                    Supports Forge 1.8.9-1.21.11. Pick between the latest stable
+                    or nightly release.
+                </p>
+
+                <div class="reveal">
+                    <div class="os-tabs">
+                        <button
+                            class="os-tab active"
+                            id="tab-win"
+                            onclick="switchOS('win')"
+                        >
+                            <svg viewBox="0 0 14 14" fill="currentColor">
+                                <path
+                                    d="M0 1.6L5.7.75v5.15H0V1.6zm6.3-.95L14 0v5.9H6.3V.65zM0 6.35h5.7v5.1L0 10.6V6.35zm6.3 0H14V14l-7.7-1.1V6.35z"
+                                />
+                            </svg>
+                            Windows
+                        </button>
+                        <button
+                            class="os-tab"
+                            id="tab-linux"
+                            onclick="switchOS('linux')"
+                        >
+                            <svg viewBox="0 0 14 14" fill="currentColor">
+                                <path
+                                    d="M7 0C3.8 0 1.4 2.3 1.4 5c0 1.5.6 2.8 1.6 3.7C2.2 9.4 1.6 10.5 1.6 11.7c0 .8.3 1.5.7 2h1.5c-.5-.4-.8-1-.8-1.7 0-.9.4-1.7 1-2.3C4.8 10.3 5.9 10.7 7 10.7s2.2-.4 3-1c.6.6 1 1.4 1 2.3 0 .7-.3 1.3-.8 1.7h1.5c.4-.5.7-1.2.7-2 0-1.2-.6-2.3-1.4-3C11.9 7.8 12.6 6.5 12.6 5 12.6 2.3 10.2 0 7 0zm0 1.8c1.8 0 3.2 1.4 3.2 3.2S8.8 8.2 7 8.2 3.8 6.8 3.8 5 5.2 1.8 7 1.8zM5.5 11.9v1.4h3v-1.4h-3z"
+                                />
+                            </svg>
+                            Linux
+                        </button>
+                    </div>
+                </div>
+
+                <!-- WINDOWS -->
+                <div class="os-panel active reveal" id="panel-win">
+                    <div class="dl-hint">
+                        <span class="dl-hint-icon">💡</span>
+                        <div class="dl-hint-text">
+                            Download the injector, then run it. Due to the
+                            injection process, you may have to exclude it from
+                            your antivirius, although this usually isn't
+                            required.
+                        </div>
+                    </div>
+                    <div class="dl-cards">
+                        <div class="dl-card">
+                            <div class="dl-card-name">
+                                Latest Stable Release
+                            </div>
+                            <div class="dl-card-meta">v1.0.2</div>
+                            <a href="#" class="dl-btn">↓ Download For Windows</a>
+                        </div>
+                        <div class="dl-card">
+                            <div class="dl-card-name">Latest Nightly Build</div>
+                            <div class="dl-card-meta">v1.1.0</div>
+                            <a href="#" class="dl-btn outline">↓ Download For Windows</a>
+                        </div>
+                    </div>
+                    <p class="checksum">
+                        SHA-256: a3f9c2d1e7b44f88c290ad13ff62... &nbsp;·&nbsp;
+                        GPG signed &nbsp;·&nbsp;
+                    </p>
+                </div>
+
+                <!-- LINUX -->
+                <div class="os-panel reveal" id="panel-linux">
+                    <div class="dl-hint">
+                        <span class="dl-hint-icon">💡</span>
+                        <div class="dl-hint-text">
+                            Download the injector, run
+                            <code>chmod +x storm-client-x86-linux</code>, then
+                            run <code>./storm-client-x86-linux</code>.
+                        </div>
+                    </div>
+                    <div class="dl-cards">
+                        <div class="dl-card">
+                            <div class="dl-card-name">
+                                Latest Stable Release
+                            </div>
+                            <div class="dl-card-meta">v1.0.2</div>
+                            <a href="#" class="dl-btn">↓ Download For Linux</a>
+                        </div>
+                        <div class="dl-card">
+                            <div class="dl-card-name">Latest Nightly Build</div>
+                            <div class="dl-card-meta">v1.1.0</div>
+                            <a href="#" class="dl-btn outline">↓ Download For Linux</a>
+                        </div>
+                    </div>
+                    <p class="checksum">
+                        SHA-256: a3f9c2d1e7b44f88c290ad13ff62... &nbsp;·&nbsp;
+                        GPG signed &nbsp;·&nbsp;
+                    </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FOOTER -->
+        <footer>
+            <div class="foot-logo">STORM</div>
+            <ul class="foot-links">
+                <li><a href="#">Discord</a></li>
+                <li><a href="#">GitHub</a></li>
+                <li><a href="#">Changelog</a></li>
+                <li><a href="#">Docs</a></li>
+            </ul>
+            <p class="foot-copy">Not affiliated with Mojang or Microsoft.</p>
+        </footer>
+
+        <script src="main.js">
+        </script>
+    </body>
+</html>
